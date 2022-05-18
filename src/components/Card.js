@@ -2,7 +2,6 @@
 import locationImg from '../images/location.svg';
 
 export default function Card(props) {
-    console.log('isLastProp', props.isLast);
     return (
         <>
             <div className="card-container container">
@@ -18,7 +17,11 @@ export default function Card(props) {
                     <p className="card-desc">{props.item.description}</p>
                 </div>
             </div>
-            { !props.isLast && <div className="hr"/>}
+            {/* showing horizontal line based on 
+              number of data, if this is last card,
+              do not add horizontal line
+            */}
+            {!props.isLast && <div className="hr" />}
         </>
     )
 }
