@@ -3,7 +3,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css?family=Inter:wght@300;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Karla:wght@300;400;500;600&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -12,122 +12,89 @@ body {
   font-size: 62.5%;
 }
 
-a {
-  text-decoration: none;
+input,
+button {
+  font: inherit;
   color: inherit;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 /* 
-========
-Reusable classes
-========
-*/
-
-.container {
-  margin: 4.5rem 4rem;
-}
-
-/* 
-========
+==========
 Navbar
-========
+==========
 */
-
 .navbar {
+  height: 6.5rem;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f55a5a;
-  height: 5.5rem;
+  padding: 0 2rem;
+}
+.navbar > img {
+  height: 2.62rem;
 }
 
-.navbar > img {
-  display: block;
-  width: 2.4rem;
-}
 .navbar > p {
-  margin: 0 0.8rem;
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* 
 ========
-Navbar
+Meme 
 ========
 */
+.main{
+  margin: 3rem;
+}
 
-.card-container {
+.form {
   display: flex;
-  max-height: 16.8rem;
-  max-width: 47rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.card-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 12.5rem;
-  object-fit: cover;
-  border-radius: .5rem;
-}
-
-.card-info{
-  padding: 1.8rem 1.6rem;
-}
-
-.card-location{
-  display: inline-flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
-.card-location img{
-  width: .7rem;
+.inputs-container {
+  display: inline-flex;
+  width: 100%;
+  gap: 0 1.8rem;
 }
 
-.card-location span{
-  display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  margin-left: .4rem;
-  text-transform: uppercase;
-}
-.card-location a{
-  font-size: 1rem;
-  text-decoration: underline;
-  margin-left: 1rem;
-  color: #918E9B;
-  letter-spacing: 1px;
+.form-input {
+  border: 2px solid #d5d4d8;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
 }
 
-.card-title{
-  font-size: 2.5rem;
-  margin-top: .8rem;
-  margin-bottom: 0;
+::placeholder {
+  font-family: "Karla", sans-serif;
 }
 
-.card-date{
-  display: inline-block;
-  font-size: 1rem;
-  margin-top: .8rem;
-  color: #2B283A;
+.btn {
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+  width: 100%;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 0.5rem;
 }
 
-.card-desc{
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #2B283A;
-
+.meme-img{
+  display: block;
+  max-width: 100%;
+  margin: auto;
 }
 
-.hr{
-  height: 1px;
-  background-color: #E5E5E5;
-  max-width: 47rem;
-  margin-left: 4rem;
-}
+
 
 
