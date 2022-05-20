@@ -48,7 +48,7 @@ Navbar
 Meme 
 ========
 */
-.main{
+.main {
   margin: 3rem;
 }
 
@@ -89,12 +89,39 @@ Meme
   border-radius: 0.5rem;
 }
 
-.meme-img{
+.meme-container {
+  position: relative;
+}
+
+.meme-img {
   display: block;
   max-width: 100%;
   margin: auto;
 }
 
+.meme-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  font-family: impact, sans-serif;
+  letter-spacing: 3px;
+  margin-right: auto;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+  text-transform: uppercase;
+}
 
+.top {
+  top: 0;
+  margin-top: 2rem;
+}
 
-
+.bottom {
+  bottom: 0;
+  margin-bottom: 2rem;
+}
