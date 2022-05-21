@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import memesData from "../data/memesData"
 
 export default function Meme() {
@@ -13,20 +13,30 @@ export default function Meme() {
     })
 
     // all memes in a state
-    const [allMemeImages, setAllMemeImages] = useState(memesData.data.memes)
+    const [allMemes, setAllMemes] = useState([])
     const [memeImage, setMemeImage] = useState("");
 
+    // API call for memes array
+    useEffect(() => {
+        async function getMemes() {
+            const res = await fetch("https://api.imgflip.com/get_memes");
+            const data = await res.json()
+            setAllMemes(data.data.memes);
+        }
+        getMemes();
+    }, [])
+
+    // pick random image and set in current meme state
     function getMemeImage() {
         const randomNum = Math.floor(Math.random() * memes.length);
-        const randomMeme = allMemeImages[randomNum];
-        console.log(randomMeme);
+        const randomMeme = allMemes[randomNum];
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: randomMeme.url
         }));
     }
 
-    // form
+    // new meme button event
     function handleOnChange(event) {
         const { name, value } = event.target;
         setMeme(prevMeme => ({
@@ -44,7 +54,7 @@ export default function Meme() {
                 <div className="inputs-container">
                     <input
                         type="text"
-                        placeholder="Shut up"
+                        placeholder="Top text"
                         name='topText'
                         value={meme.topText}
                         className="form-input"
@@ -52,7 +62,7 @@ export default function Meme() {
                     />
                     <input
                         type="text"
-                        placeholder="Shut up"
+                        placeholder="Bottom text"
                         name='bottomText'
                         value={meme.bottomText}
                         className="form-input"
