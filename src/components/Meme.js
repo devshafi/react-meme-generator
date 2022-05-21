@@ -14,7 +14,6 @@ export default function Meme() {
 
     // all memes in a state
     const [allMemes, setAllMemes] = useState([])
-    const [memeImage, setMemeImage] = useState("");
 
     // API call for memes array
     useEffect(() => {

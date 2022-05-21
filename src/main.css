@@ -27,7 +27,7 @@ Navbar
 ==========
 */
 .navbar {
-  height: 6.5rem;
+  height: 4rem;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   display: flex;
   justify-content: space-between;
@@ -124,4 +124,26 @@ Meme
 .bottom {
   bottom: 0;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width:672px) {
+  .navbar > img {
+    height: 1.8rem;
+  }
+  
+  .navbar > p {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:470px) {
+  .navbar > img {
+    height: 1.4rem;
+  }
+  
+  .navbar > p {
+    color: #ffffff;
+    font-size: .8rem;
+  }
 }
